@@ -1,57 +1,3 @@
-var pizza1 = {
-    crustType: "deep dish",
-    sauceType: "traditional",
-    cheeses: ["mozzarella"],
-    toppings: ["pepperoni", " sausage"],
-    display: function() {
-console.log("Crust: " + this.crustType);
-console.log("Sauce: " + this.sauceType);
-console.log("Cheese: " + this.cheeses);
-console.log("Toppings: " + this.toppings);
-    }
-}
-var pizza2 = {
-    crustType: "hand tossed",
-    sauceType: "marinara",
-    cheeses: ["mozzarella", "feta"],
-    toppings: ["mushrooms", " olives", " onions"],
-    display: function() {
-console.log("Crust: " + this.crustType);
-console.log("Sauce: " + this.sauceType);
-console.log("Cheese: " + this.cheeses);
-console.log("Toppings: " + this.toppings);
-    }
-}
-var pizza3 = {
-    crustType: "cheese stuffed",
-    sauceType: "pesto",
-    cheeses: ["mozzarella", "feta"],
-    toppings: ["spinach", " sausage", " chicken"],
-    display: function() {
-console.log("Crust: " + this.crustType);
-console.log("Sauce: " + this.sauceType);
-console.log("Cheese: " + this.cheeses);
-console.log("Toppings: " + this.toppings);
-    }
-}
-var pizza4 = {
-    crustType: "pan",
-    sauceType: "alfredo",
-    cheeses: ["mozzarella"],
-    toppings: ["tomato"],
-    display: function() {
-console.log("Crust: " + this.crustType);
-console.log("Sauce: " + this.sauceType);
-console.log("Cheese: " + this.cheeses);
-console.log("Toppings: " + this.toppings);
-    }
-}
-
-pizza1.display();
-pizza2.display();
-pizza3.display();
-pizza4.display();
-
 function pizzaOven( crustType, sauceType, cheeses, toppings) {
     var pizza = {};
     pizza.crustType = crustType;
@@ -62,3 +8,27 @@ function pizzaOven( crustType, sauceType, cheeses, toppings) {
 }
 var pizza1 = pizzaOven("deep dish", "traditional", ["mozzarella"], ["pepperoni", "sausage"]);
 console.log(pizza1)
+var pizza2 = pizzaOven("hand tossed", "marinara", ["mozzarella", "feta"], ["mushrooms", "olives", "onions"]);
+console.log(pizza2)
+var pizza3 = pizzaOven("cheese stuffed", "pesto", ["mozzarella", "feta"], ["spinach", " sausage", " chicken"]);
+console.log(pizza3)
+var pizza4 = pizzaOven("pan", "alfredo", ["mozzarella"], ["tomato"]);
+console.log(pizza4)
+
+
+function pizzaOven() {
+    var crust1 = Math.floor(Math.random() * crustType.length);
+    var sauce1 = Math.floor(Math.random() * sauceType.length);
+    var cheeses1 = Math.floor(Math.random() * cheeses.length);
+    var toppings1 = Math.floor(Math.random() * toppings.length);
+    console.log (crustType[crust1]);
+    console.log (sauceType[sauce1]) ;
+    console.log (cheeses[cheeses1]);
+    console.log (toppings[toppings1]);
+}
+    var crustType = ["deepdish", "handtossed", "cheese-stuffed", "pan"];
+    var sauceType = ["traditional", "marinara", "pesto", "alfredo"];
+    var cheeses = ["mozzaralla", "feta", "feta and mozzarella"];
+    var toppings = ["pepperoni", "sausage", "mushroom", "olives", "onions", "spinach", "chicken", "tomato"];
+    
+    pizzaOven()
